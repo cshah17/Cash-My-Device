@@ -1,0 +1,14 @@
+export const AUTH_START = 'AUTH_START';
+export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_FAIL = 'AUTH_FAIL';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT';
+
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_TO_CART = 'REMOVE_TO_CART';
+export const UPDATE_CART_PAYMENT = 'UPDATE_CART_PAYMENT';
+export const UPDATE_CART_ADDRESS = 'UPDATE_CART_ADDRESS';
+
+export const CLEAR_CART_ITEM = 'CLEAR_CART_ITEM';
+export const UPDATE_TOTAL_PAYMENT = 'UPDATE_TOTAL_PAYMENT';
+
+
