@@ -121,7 +121,7 @@ class CustomLayout extends React.Component {
                                     <div className="address">
                                         <span className="contect">
                                             1.555.555.5535<br />
-                                    7am - 6pm PT<br />
+                                    7am - 6pm PST<br />
                                     Everyday
                                     </span>
                                         <span className="email">
