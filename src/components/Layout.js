@@ -130,7 +130,7 @@ class CustomLayout extends React.Component {
                               
                                       <span className="time">
                                             <Link to='#'>Live Chat</Link>
-                                            <br />6Am - 5pm PST<br />Everyday
+                                            <br />6Am - 5Pm PST<br />Everyday
                                     </span>
                                     </div>
                                 </div>
