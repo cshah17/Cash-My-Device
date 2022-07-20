@@ -125,7 +125,7 @@ class CustomLayout extends React.Component {
                                     Everyday
                                     </span>
                                         <span className="email">
-                                            <Link to='#'>Email us</Link>
+                                            <Link to='#'>Email Us</Link>
                                         </span>
                               
                                       <span className="time">
