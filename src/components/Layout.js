@@ -127,9 +127,10 @@ class CustomLayout extends React.Component {
                                         <span className="email">
                                             <Link to='#'>Email us</Link>
                                         </span>
-                                        <span className="time">
+                              
+                                      <span className="time">
                                             <Link to='#'>Live Chat</Link>
-                                            <br />6am - 5pm PT<br />Everyday
+                                            <br />6am - 5pm PST<br />Everyday
                                     </span>
                                     </div>
                                 </div>
