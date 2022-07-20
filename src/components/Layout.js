@@ -82,7 +82,7 @@ class CustomLayout extends React.Component {
                                                 :
                                                 <li className="nav-item mx-0 mx-lg-1">
                                                     <Link className="headerbuyLink nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" to="/Login">
-                                                        Login/Register</Link>
+                                                        Login/Sign up</Link>
                                                 </li>
                                         }
 
