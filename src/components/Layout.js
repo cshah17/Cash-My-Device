@@ -122,7 +122,7 @@ class CustomLayout extends React.Component {
                                         <span className="contect">
                                             1.555.555.5535<br />
                                     7am - 6pm PT<br />
-                                    EVeryday
+                                    EVerYday
                                     </span>
                                         <span className="email">
                                             <Link to='#'>Email Us</Link>
