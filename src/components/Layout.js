@@ -120,7 +120,7 @@ class CustomLayout extends React.Component {
                                     <h4 className="mb-4">CONTACT</h4>
                                     <div className="address">
                                         <span className="contect">
-                                            1.666.666.5595<br />
+                                            1.666.666.4444<br />
                                     7am - 6pm PsT<br />
                                     Everyday
                                     </span>
