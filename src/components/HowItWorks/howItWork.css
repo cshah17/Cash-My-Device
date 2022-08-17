@@ -1,0 +1,56 @@
+ .contact-top,
+ .contact-middle {
+ 	display: block;
+ 	text-align:center;
+ }
+ .contact-top {
+     margin-bottom: 80px;
+ }
+ .contact-top h2 {
+     font-size: 35px;
+     line-height: normal;
+     color: #ffc501;
+     margin-bottom: 50px;
+ }
+ .contact-top h2 span {
+     display: block;
+     font-size: 20px;
+     color: #2f2f2f;
+     padding-top: 10px;
+ }
+ .contact-middle {
+ 	padding-bottom: 20px;
+ }
+ .contact-middle h3 {
+     font-size: 25px;
+     line-height: normal;
+     color: #000;
+     margin-bottom: 50px;
+ }
+ .middle-tab {
+ 	background: #eee;
+     font-size: 18px;
+ 	color: #000;
+ 	min-height: 220px;
+ 	border-radius: 5px;
+     padding: 20px;
+ }
+ .contact-middle .col-md-4:nth-child(2) .middle-tab {
+ 	background: #ffc501;
+ }
+ .middle-tab-icon {
+     margin-bottom: 20px;
+ }
+ @media (max-width:767px) {
+ .middle-tab {
+ 	margin-bottom: 15px;
+ }
+ }
+ @media (max-width:479px) {
+ .contact-top h2 {
+     font-size: 25px;
+ }
+ .contact-middle h3 {
+     font-size: 22px;
+ }
+}
