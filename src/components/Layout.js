@@ -249,11 +249,7 @@ class CustomLayout extends React.Component {
                         <div className="container">
                             <small className="pre-wrap">
                                 <p>
-                                    ©2014 - 2018, LLC. All Rights Reserved,
-                                    Patents Pending. cashmydevices.com is not affiliated with nor has it been authorized, sponsored, or otherwise
-                                    approved by the manufacturers of the items available for trade-in or purchase. cashmydevices.com and the
-                                    cashmydevices.com logo are trademarks of, LLC, registered in the U.S. All other trademarks, logos and
-                                    brands are the property of their respective owners. LLC CA DOJ #3711-2068
+                                    Cashmydevices LLC .
                         </p>
                             </small>
                         </div>

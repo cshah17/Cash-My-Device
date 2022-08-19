@@ -155,24 +155,7 @@ const SendTicket = (props) => {
                                     </div>
 
 
-                                    <div className="row mt-3">
-                                        <div className="col-md-10">
-                                            <label className="mt-2">
-                                               
-                                            </label>
-                                            {/* <Recaptcha
-                                                name="captcha"
-                                                sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                                                render="explicit"
-                                                verifyCallback={(response) => {
-                                                    setFieldValue('captcha', response)
-                                                }}
-                                            />
-                                            <ErrorMessage name="captcha" className="text-danger" component="div" /> */}
-                                        </div>
-                                        <div className="col-md-1"></div>
-                                        <div className="col-md-1"></div>
-                                    </div>
+                                    
 
                                     <div className="mt-5">
                                         <button type="submit" className="px-5 btn btn-outline-primary btn-lg">

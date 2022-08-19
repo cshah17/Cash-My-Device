@@ -12,5 +12,5 @@ export const addInquerer = (obj) => {
 }
 
 export const generalInquiry = (obj) => {
-    return API.post(BASE_re_path + '/api/generalinquery/', obj )
+    return API.post('http://localhost:8000/api/generalinquery/', obj )
 }
