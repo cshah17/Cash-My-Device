@@ -13,7 +13,7 @@ const deviceNav = (props) => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#pricing">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
 
                     <NavDropdown title="IPHONES" id="collasible-nav-dropdown">
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 11 Pro Max")}>iPhone 11 pro Max</NavDropdown.Item>
