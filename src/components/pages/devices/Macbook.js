@@ -11,8 +11,8 @@ import LoaderSpinner from "../../Loader/loaderSpinner";
 
 const deviceList = [
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/Macbook/macbook.jpeg',
-        deviceName: "MacBook (2015 - Present)",
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/Macbook/Macbook-12.jpg.webp',
+        deviceName: "MacBook",
         label: "Macbook",
         size: [
             {
@@ -82,12 +82,12 @@ const deviceList = [
                 ]
             }
         ],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/Macbook/macbook.jpeg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/Macbook/Macbook-12.jpg.webp"
     },
 
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/Macbook/macbookAir.jpeg',
-        deviceName: "MacBook Air (2009 - Present)",
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/Macbook/Macbook-air.png',
+        deviceName: "MacBook Air ",
         label: "Macbook Air",
         size: [
             {
@@ -128,8 +128,8 @@ const deviceList = [
                 ]
             },
             {
-                size: "11",
-                sizeLabel: "MacBook Air 11",
+                size: "13",
+                sizeLabel: "MacBook Air (2018 - 2020)",
                 years: [
                     {
                         year: "Early 2014",
@@ -176,7 +176,7 @@ const deviceList = [
             },
             {
                 size: "13",
-                sizeLabel: "MacBook Air 13 (2009 - 2017)",
+                sizeLabel: "MacBook Air (2012 - 2017)",
                 years: [
                     {
                         year: "Early 2014",
@@ -229,7 +229,7 @@ const deviceList = [
                 ]
             }
         ],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/Macbook/macbookAir.jpeg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/Macbook/Macbook-air.png"
     },
 
     {

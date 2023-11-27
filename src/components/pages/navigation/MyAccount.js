@@ -1290,6 +1290,7 @@ const MyOrderTrade = ({ userInfo }) => {
     UserTradeInfo(userInfo.pk).then((res) => {
       if (!isEmpty(res.data.results)) {
         inProgressStepper(res.data.results);
+        console.log(res.data.results)
       }
     }).catch((err) => {
       console.log(err);
@@ -1298,7 +1299,8 @@ const MyOrderTrade = ({ userInfo }) => {
 
   const inProgressStepper = async (obj) => {
     await obj.map(x => {
-      if (x.status == null) {
+      if (x.status === 'inprogress') {
+        console.log(obj)
         const step = []
         if (isEmpty(x.orderDate)) {
           step.push({ title: "Order placed", activeStep: 0 }, { title: "Shipping label sent", activeStep: 0 },
@@ -1361,6 +1363,7 @@ const MyOrderTrade = ({ userInfo }) => {
         }
         x.steps = step;
         return x
+        
       } else {
         return x
       }
@@ -1419,7 +1422,8 @@ const MyOrderTrade = ({ userInfo }) => {
 
         <Tab eventKey="inProgress" title="In-progress">
           {!isEmpty(myOrderTrade) && myOrderTrade.map((item, index) => {
-            if (item.status === null) {
+            
+            if (item.status === 'inprogress') {
               return (
                 <div className="m-4 border-bottom bg-aliceblue row" key={index}>
                   <div className="col-md-6 mt-3">
@@ -1451,8 +1455,12 @@ const MyOrderTrade = ({ userInfo }) => {
                   </div>
                   <div className="col-md-12 mb-4">
                     <Stepper steps={item.steps} activeStep={item.steps[0].activeStep} />
+                   <p>{item.steps[0].activeStep}</p>
+           
+                    
                   </div>
                 </div>
+                
               )
             }
           }

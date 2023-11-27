@@ -16,6 +16,20 @@ const deviceNav = (props) => {
                     <Nav.Link href="/">Home</Nav.Link>
 
                     <NavDropdown title="IPHONES" id="collasible-nav-dropdown">
+                    <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 14 Pro Max")}>iPhone 14 pro Max</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 14 Pro")}>iPhone 14 pro</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 14 Plus")}>iPhone 14 Plus</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 14")}>iPhone 14 </NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone SE 3rd")}>iPhone SE(3rd)</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 13 Pro Max")}>iPhone 13 pro Max</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 13 Pro")}>iPhone 13 pro</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 13")}>iPhone 13</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 13 Mini")}>iPhone 13 Mini</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 12 Pro Max")}>iPhone 12 pro Max</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 12 Pro")}>iPhone 12 pro</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 12")}>iPhone 12</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 12 Mini")}>iPhone 12 Mini</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone SE 2nd")}>iPhone SE(2nd)</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 11 Pro Max")}>iPhone 11 pro Max</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 11 Pro")}>iPhone 11 pro</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 11")}>iPhone 11</NavDropdown.Item>
@@ -24,9 +38,10 @@ const deviceNav = (props) => {
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone XR")}>iPhone XR</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone X")}>iPhone X</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 8 Plus")}>iPhone 8 Plus</NavDropdown.Item>
-                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 8")}>iPhone 8</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 8 Plus")}>iPhone 8 </NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 7 Plus")}>iPhone 7 plus</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 7")}>iPhone 7</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 7")}>iPhone SE(1st)</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 6S Plus")}>iPhone 6s Plus</NavDropdown.Item>
                     </NavDropdown>
 

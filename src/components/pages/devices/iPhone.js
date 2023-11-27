@@ -16,46 +16,127 @@ import verizon from './Carrier/verizon.png';
 
 const deviceList1 = [
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone11ProMax.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-pro-max.jpg',
+        label: "IPhone 14 Pro Max",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-pro-max.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-pro.jpg',
+        label: "Iphone 14 Pro",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-pro.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-plus.jpg',
+        label: "Iphone 14 Plus",
+        deviceGb: ["128 GB", "256 GB", "512 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-plus.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14.jpg',
+        label: "Iphone 14",
+        deviceGb: ["128 GB", "256 GB", "512 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-se-3rd-gen.jpg',
+        label: "Iphone SE 3rd",
+        deviceGb: ["64 GB","128 GB", "256 GB", "not known"],
+        imagePath: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-se-3rd-gen.jpg'
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-13-pro-max.jpg',
+        label: "Iphone 13 Pro Max",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-13-pro-max.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-13-pro.jpg',
+        label: "Iphone 13 Pro",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-13-pro.jpg"
+    },
+
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone13.jpg',
+        label: "Iphone 13",
+        deviceGb: ["128 GB", "256 GB", "512 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone13.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-13-mini.jpg',
+        label: "Iphone 13 Mini",
+        deviceGb: ["128 GB", "256 GB", "512 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-13-mini.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12-pro-max.jpg',
+        label: "Iphone 12 Pro Max",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12-pro-max.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12-pro.jpg',
+        label: "Iphone 12 Pro",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12-pro.jpg"
+    },
+
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12.jpg',
+        label: "Iphone 12",
+        deviceGb: ["64 GB","128 GB", "256 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12.jpg"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12-mini.jpg',
+        label: "Iphone 12 Mini",
+        deviceGb: ["64 GB","128 GB", "256 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-12-mini.jpg"
+    },
+
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-11-pro-max.jpg',
         label: "IPhone 11 Pro Max",
         deviceGb: ["64 GB", "256 GB", "512 GB", "not known"],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone11ProMax.jpg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-11-pro-max.jpg"
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone11.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone11pro.jpg',
         label: "Iphone 11 Pro",
         deviceGb: ["64 GB", "256 GB", "512 GB", "not known"],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone11.jpg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone11pro.jpg"
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone11.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-11.jpg',
         label: "Iphone 11",
         deviceGb: ["64 GB", "128 GB ", "256 GB", "not known"],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone11.jpg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-11.jpg"
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneXSMax.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-xs-max.jpg',
         label: "Iphone XS Max",
         deviceGb: ["64 GB", "256 GB", "512 GB", "not known"],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneXSMax.jpg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-xs-max.jpg"
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneXS.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-xs.jpg',
         label: "Iphone XS",
         deviceGb: ["64 GB", "256 GB", "512 GB", "not known"],
-        imagePath: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneXS.jpg'
+        imagePath: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-xs.jpg'
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneXR.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-xr.jpg',
         label: "Iphone XR",
         deviceGb: ["64 GB", "128 GB ", "256 GB", "not known"],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneXR.jpg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-xr.jpg"
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneX.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-x.jpg',
         label: "Iphone X",
         deviceGb: ["64 GB", "256 GB", "not known"],
-        imagePath: "https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphoneX.jpg"
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-x.jpg"
     }
 
 
@@ -63,35 +144,30 @@ const deviceList1 = [
 
 const deviceList2 = [
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone8Plus.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-8-plus.jpg',
         label: "Iphone 8 Plus",
         deviceGb: ["64 GB", "256 GB", "not known"],
-        imagePath: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone8Plus.jpg'
+        imagePath: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-8-plus.jpg'
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone8.jpg',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-8.jpg',
         label: "Iphone 8",
         deviceGb: ["64 GB", "256 GB", "not known"],
-        imagePath: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone8.jpg'
+        imagePath: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-8.jpg'
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone7.png',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone7.jpg',
         label: "Iphone 7",
         deviceGb: ["32 GB", "128 GB ", "256 GB", "not known"],
-        imagePath: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone7.png'
+        imagePath: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone7.jpg'
     },
     {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone7plus.png',
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-7-plus.jpg',
         label: "Iphone 7 Plus",
         deviceGb: ["32 GB", "128 GB ", "256 GB", "not known"],
-        imagePath: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone7plus.png'
+        imagePath: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-7-plus.jpg'
     },
-    {
-        devicePhoto: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone6sPlus.png',
-        label: "Iphone 6S Plus",
-        deviceGb: ["16 GB", "32 GB", "64 GB", "128 GB ", "not known"],
-        imagePath: 'https://cashmydevice-frontend.s3-us-west-1.amazonaws.com/iPhone/iphone6sPlus.png'
-    }
+    
 ]
 
 
@@ -199,7 +275,7 @@ const IPhone = (props) => {
                                     <div className="mt-2 text-center">
                                         <img src={item.devicePhoto} onClick={() => selectDevice(item)} />
                                     </div>
-                                    <div className="text-center mt-1">
+                                    <div className="text-right mt-2">
                                         <label className="w-100" onClick={() => selectDevice(item)} variant="warning">{item.label}</label>
                                     </div>
                                 </div>
@@ -212,7 +288,7 @@ const IPhone = (props) => {
                                     <div className="mt-2 text-center">
                                         <img src={item.devicePhoto} onClick={() => selectDevice(item)} />
                                     </div>
-                                    <div className="text-center mt-1">
+                                    <div className="text-right mt-1">
                                         <label className="w-100" onClick={() => selectDevice(item)} variant="warning">{item.label}</label>
                                     </div>
                                 </div>
