@@ -44,10 +44,10 @@ const PaymentPage = (props) => {
     };
 
     const paymentSchema = Yup.object().shape({
-        name: Yup.string()
-            .required('Please enter name'),
-        useName: Yup.string()
-            .required('Please enter user name'),
+        firstname: Yup.string()
+            .required('Please enter firstname'),
+        lastname: Yup.string()
+            .required('Please enter lastname'),
         phone: Yup.string()
             .matches(phoneRegex, "Please enter valid contact number")
             .required('Please enter phone number'),
@@ -60,7 +60,7 @@ const PaymentPage = (props) => {
         name: Yup.string()
             .required('Please enter name'),
         cashTag: Yup.string()
-            .required('Please enter cash tag'),
+            .required('Please enter your name as per your bank account'),
         phone: Yup.string()
             .matches(phoneRegex, "Please enter valid contact number")
             .required('Please enter phone number'),
@@ -76,7 +76,7 @@ const PaymentPage = (props) => {
             .matches(phoneRegex, "Please enter valid contact number")
             .required('Please enter phone number'),
         email: Yup.string()
-            .email('Please enter valid email!')
+            .email('Please enter valid interac email!')
             .required('Please enter email'),
     });
 
@@ -115,12 +115,12 @@ const PaymentPage = (props) => {
             <div className="row ml-4">
                 <div className="col-md-12 mt-3 mr-3 ">
                     <div className="col-md-4 p-3 bg-aliceblue rounded">
-                        <label>Paypal</label>
-                        <input className="float-right" onClick={() => setSelectedPaymentMethod('Paypal')} type="radio" value="Paypal" name="method" /> <br />
+                        <label>Cash</label>
+                        <input className="float-right" onClick={() => setSelectedPaymentMethod('Cash')} type="radio" value="Cash" name="method" /> <br />
                         {
-                            selectedPaymentMethod === 'Paypal' &&
+                            selectedPaymentMethod === 'Cash' &&
                             <Formik
-                                initialValues={{ name: '', useName: '', phone: '', email: '' }}
+                                initialValues={{ name: '', useame: '', phone: '', email: '' }}
                                 onSubmit={handleSubmit}
                                 validationSchema={paymentSchema}
                                 innerRef={fromRef}
@@ -129,7 +129,7 @@ const PaymentPage = (props) => {
                                     <Form>
                                         <div className="col-md-12 pl-0 mt-2">
                                             <label>
-                                                Name:
+                                               First Name:
                                                </label>
                                             <div>
                                                 <Field className="form-control" type="text" name="name" />
@@ -138,7 +138,7 @@ const PaymentPage = (props) => {
                                         </div>
                                         <div className="col-md-12 pl-0">
                                             <label>
-                                                User name:
+                                                Last Name:
                                                </label>
                                             <div>
                                                 <Field className="form-control" type="text" name="useName" />
@@ -171,10 +171,10 @@ const PaymentPage = (props) => {
                 </div>
                 <div className="col-md-12 mt-3">
                     <div className="col-md-4 p-3 bg-aliceblue rounded">
-                        <label>Venmo</label>
-                        <input className="float-right" onClick={() => setSelectedPaymentMethod('Venmo')} type="radio" value="Venmo" name="method" /><br />
+                        <label>Check</label>
+                        <input className="float-right" onClick={() => setSelectedPaymentMethod('Check')} type="radio" value="Check" name="method" /><br />
                         {
-                            selectedPaymentMethod === 'Venmo' && <Formik
+                            selectedPaymentMethod === 'Check' && <Formik
                                 initialValues={{ name: '', useName: '', phone: '', email: '' }}
                                 onSubmit={handleSubmit}
                                 validationSchema={paymentSchema}
@@ -193,7 +193,7 @@ const PaymentPage = (props) => {
                                         </div>
                                         <div className="col-md-12 pl-0">
                                             <label>
-                                                User name:
+                                                Name as per your bank account:
                                                 </label>
                                             <div>
                                                 <Field className="form-control" type="text" name="useName" />
@@ -227,10 +227,10 @@ const PaymentPage = (props) => {
 
                 <div className="col-md-12 mt-3">
                     <div className="col-md-4 p-3 bg-aliceblue rounded">
-                        <label>Cash app</label>
-                        <input className="float-right" onClick={() => setSelectedPaymentMethod('cashapp')} type="radio" value="cashapp" name="method" /><br />
+                        <label>E-Transfer</label>
+                        <input className="float-right" onClick={() => setSelectedPaymentMethod('E-Transfer')} type="radio" value="E-Transfer" name="method" /><br />
                         {
-                            selectedPaymentMethod === 'cashapp' && <Formik
+                            selectedPaymentMethod === 'E-Transfer' && <Formik
                                 initialValues={{ name: '', cashTag: '', phone: '', email: '' }}
                                 onSubmit={handleSubmit}
                                 validationSchema={paymentCashappSchema}
@@ -240,7 +240,7 @@ const PaymentPage = (props) => {
                                     <Form>
                                         <div className="col-md-12 pl-0 mt-2">
                                             <label>
-                                                Name:
+                                               First Name:
                                                 </label>
                                             <div>
                                                 <Field className="form-control" type="text" name="name" />
@@ -249,7 +249,7 @@ const PaymentPage = (props) => {
                                         </div>
                                         <div className="col-md-12 pl-0">
                                             <label>
-                                                Cash tag:
+                                               Last Name:
                                              </label>
                                             <div>
                                                 <Field className="form-control" type="text" name="cashTag" />
@@ -267,7 +267,7 @@ const PaymentPage = (props) => {
                                         </div>
                                         <div className="col-md-12 pl-0">
                                             <label>
-                                                Email :
+                                               Email for Interac  :
                                                </label>
                                             <div>
                                                 <Field className="form-control" type="text" name="email" />
@@ -282,53 +282,7 @@ const PaymentPage = (props) => {
                     </div>
                 </div>
 
-                <div className="col-md-12 mt-3">
-                    <div className="col-md-4 p-3 bg-aliceblue rounded">
-                        <label>Zelle</label>
-                        <input className="float-right" onClick={() => setSelectedPaymentMethod('Zelle')} type="radio" value="Zelle" name="method" /><br />
-                        {
-                            selectedPaymentMethod === 'Zelle' &&
-                            <Formik
-                                initialValues={{ name: '', useName: '', phone: '', email: '' }}
-                                onSubmit={handleSubmit}
-                                validationSchema={paymentZelleSchema}
-                                innerRef={fromRef}
-                            >
-                                {({ isSubmitting }) => (
-                                    <Form>
-                                        <div className="col-md-12 pl-0 mt-2">
-                                            <label>
-                                                Name:
-                                                 </label>
-                                            <div>
-                                                <Field className="form-control" type="text" name="name" />
-                                                <ErrorMessage name="name" className="text-danger" component="div" />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 pl-0">
-                                            <label>
-                                                Phone:
-                                               </label>
-                                            <div>
-                                                <Field className="form-control" type="text" name="phone" />
-                                                <ErrorMessage name="phone" className="text-danger" component="div" />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 pl-0">
-                                            <label>
-                                                Email :
-                                                </label>
-                                            <div>
-                                                <Field className="form-control" type="text" name="email" />
-                                                <ErrorMessage name="email" className="text-danger" component="div" />
-                                            </div>
-                                        </div>
-                                    </Form>
-                                )}
-                            </Formik>
-                        }
-                    </div>
-                </div>
+                
             </div>
             <div className="row mt-4 ml-1">
                 <div className="col-md-6 mt-4 d-flex">

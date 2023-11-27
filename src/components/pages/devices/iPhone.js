@@ -16,6 +16,30 @@ import verizon from './Carrier/verizon.png';
 
 const deviceList1 = [
     {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15-pro-max.png',
+        label: "IPhone 15 Pro Max",
+        deviceGb: ["256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15-pro-max.png"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15-pro.png',
+        label: "Iphone 15 Pro",
+        deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15-pro.png"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15-plus.png',
+        label: "Iphone 15 Plus",
+        deviceGb: ["128 GB", "256 GB", "512 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15-plus.png"
+    },
+    {
+        devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15.png',
+        label: "Iphone 15",
+        deviceGb: ["128 GB", "256 GB", "512 GB", "not known"],
+        imagePath: "https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-15.png"
+    },
+    {
         devicePhoto: 'https://cashmydevice-frontend.s3.us-west-1.amazonaws.com/iPhone/iphone-14-pro-max.jpg',
         label: "IPhone 14 Pro Max",
         deviceGb: ["128 GB", "256 GB", "512 GB","1 TB", "not known"],
@@ -271,11 +295,11 @@ const IPhone = (props) => {
                     <div className="row mt-5">
                         {
                             !isEmpty(deviceList1) && deviceList1.map((item, index) => (
-                                <div className={`device-item-div col-sm-4 col-md-2 d-flex flex-column cursor-pointer justify-content-space-between ${selectedDevice && selectedDevice[0].devicePhoto === item.devicePhoto ? 'active' : ''}`} key={index}>
-                                    <div className="mt-2 text-center">
+                                <div className={`device-item-div col-sm-4 col-md-3 d-flex flex-column cursor-pointer justify-content-space-between ${selectedDevice && selectedDevice[0].devicePhoto === item.devicePhoto ? 'active' : ''}`} key={index}>
+                                    <div className="mt-4 text-center">
                                         <img src={item.devicePhoto} onClick={() => selectDevice(item)} />
                                     </div>
-                                    <div className="text-right mt-2">
+                                    <div className="text-center mt-4" >
                                         <label className="w-100" onClick={() => selectDevice(item)} variant="warning">{item.label}</label>
                                     </div>
                                 </div>
@@ -408,40 +432,52 @@ const IPhone = (props) => {
 
                                             </div>
                                             {!values.carrier &&
-                                                <div role="group" aria-labelledby="my-radio-group">
-                                                    <div>
-                                                        <label className={`ml-4 mt-4 cursor-pointer  border-dark-white rounded p-4 ${values.carrier === "att" && 'border border-dark' || ''}`}>
-                                                            <img className="mb-5" src={att} height="50" />
-                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="att" />
+                                               <div role="group" className="row mt-3" aria-labelledby="my-radio-group">
+                                                    <div className="col d-flex">
+                                                       
+                                                    <div className="border border-dark-white rounded mx-2">
+                                                        <label className={`d-flex align-items-center justify-content-center h-100 m-2 cursor-pointer text-center p-4 ${values.carrier === "Bell" && 'border border-dark' || ''}`}>
+                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="Bell" />
+                                                            <div><h1> Bell</h1></div>
                                                         </label>
-                                                        {(selectedDevice[0].label !== 'Iphone 11' && selectedDevice[0].label !== 'IPhone 11 Pro Max' && selectedDevice[0].label !== 'Iphone 11 Pro') &&
-                                                            <label className={`ml-4 mt-4 cursor-pointer  border-dark-white rounded p-4 ${values.carrier === "sprint" && 'border border-dark' || ''}`}>
-                                                                <img className="mb-5" src={sprint} height="50" />
-                                                                <Field className="mr-2 d-none" type="radio" name="carrier" value="sprint" />
-                                                            </label>
-                                                        }
-                                                        <label className={`ml-4 mt-4 cursor-pointer  border-dark-white rounded p-4 ${values.carrier === "tmobile" && 'border border-dark' || ''}`}>
-                                                            <img className="mb-5" src={tmobile} height="50" />
-                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="tmobile" />
+                                                    </div>
+                                                    <div className="border border-dark-white rounded mx-2">
+                                                        <label className={`d-flex align-items-center justify-content-center h-100 m-2 cursor-pointer text-center p-4 ${values.carrier === "Rogers" && 'border border-dark' || ''}`}>
+                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="Rogers" />
+                                                            <div><h1> Rogers</h1></div>
                                                         </label>
-                                                        <label className={`ml-4 mt-4 cursor-pointer  border-dark-white rounded p-4 ${values.carrier === "verizon" && 'border border-dark' || ''}`}>
-                                                            <img className="mb-5" src={verizon} height="100" />
-                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="verizon" />
+                                                    </div>
+                                                    <div className="border border-dark-white rounded mx-2">
+                                                        <label className={`d-flex align-items-center justify-content-center h-100 m-2 cursor-pointer text-center p-4 ${values.carrier === "Fido" && 'border border-dark' || ''}`}>
+                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="Fido" />
+                                                            <div><h1> Fido</h1></div>
                                                         </label>
-                                                        <label className={`ml-4 mt-4 cursor-pointer border text-center border-dark-white rounded p-4 ${values.carrier === "unlocked" && 'border border-dark' || ''}`}>
+                                                    </div>
+                                                    <div className="border border-dark-white rounded mx-2">
+                                                        <label className={`d-flex align-items-center justify-content-center h-100 m-2 cursor-pointer text-center p-4 ${values.carrier === "Telus" && 'border border-dark' || ''}`}>
+                                                            <Field className="mr-2 d-none" type="radio" name="carrier" value="Telus" />
+                                                            <div><h1> Telus</h1></div>
+                                                        </label>
+                                                    </div>
+                                                    <div className="border border-dark-white rounded mx-2">
+                                                    <label className={`h-100 m-2 cursor-pointer text-center  p-4 ${values.carrier === "unlocked" && 'border border-dark' || ''}`}>
                                                             <Field className="mr-2 d-none" type="radio" name="carrier" value="unlocked" />
-                                                            <div className="mt-3">
-                                                                <h4>
-                                                                    Factory
-                                                                </h4>
-                                                            </div>
                                                             <div>
-                                                                <h4>
-                                                                    Unlocked
-                                                                 </h4>
+                                                                <b>Carrier unlocked</b>
                                                             </div>
+                                                            <div className="margin-5">
+                                                               can be used
+                                                            </div>
+                                                            <div className="margin-5">
+                                                                 with any carrier
+                                                           </div>
+                                                            <div className="margin-5 mb-1">
+                                                             across the world
+                                                           </div>
                                                         </label>
-                                                        <label className={`ml-4 mt-4 cursor-pointer text-center  border border-dark-white rounded p-4 ${values.carrier === "other" && 'border border-dark' || ''}`}>
+                                                    </div>
+                                                    <div className="border border-dark-white rounded mx-2">
+                                                        <label className={`h-100 m-2 cursor-pointer text-center  p-4 ${values.carrier === "other" && 'border border-dark' || ''}`}>
                                                             <Field className="mr-2 d-none" type="radio" name="carrier" value="other" />
                                                             <div>
                                                                 <b>Other Carrier</b>
@@ -455,8 +491,8 @@ const IPhone = (props) => {
                                                             <div className="margin-5 mb-1">
                                                                 or not listed here
                                                            </div>
-
                                                         </label>
+                                                    </div>
                                                     </div>
                                                     <div className="col-md-12 mt-2">
                                                         <ErrorMessage name="carrier" className="text-danger" component="div" />
@@ -471,7 +507,7 @@ const IPhone = (props) => {
                                             <div className="col-md-12 mt-3">
                                                 {values.deviceType &&
                                                     <div className="d-flex align-items-center">
-                                                        <h4> {values.deviceType}/ {values.carrier === "att" ? 'At&t' : values.carrier} </h4> <span className="ml-2 cursor-pointer text-info h6"
+                                                        <h4> {values.deviceType}/ {values.carrier === "Bell" ? 'Bell' : values.carrier} </h4> <span className="ml-2 cursor-pointer text-info h6"
                                                             onClick={(e) => {
                                                                 handleChange({
                                                                     target: {
@@ -492,47 +528,90 @@ const IPhone = (props) => {
                                             </div>
                                             <div>
                                                 {isEmpty(offers) && values.deviceType &&
-                                                    <div className="mt-4 ml-3 mr-3 row" role="group" aria-labelledby="my-radio-group">
-                                                        <div className="col-md-2 ml-2 mb-2 border py-2">
-                                                            <div className="d-flex justify-content-between">
-                                                                <label className="h5"> Good</label>
-                                                                <Field className="mt-1" type="radio" name="condition" value="100%" />
-                                                            </div>
-                                                            <label className="mt-2">
-                                                                Almost like new, minimal wear and tear.
-                                                          </label>
-                                                        </div>
+                                                    <div role="group" className="row mt-3" aria-labelledby="my-radio-group">
+                                                         <div className="col d-flex">
+                                                             
+                                                         <div className="border border-dark-white rounded mx-2">
 
-                                                        <div className="col-md-2 ml-2 mb-2 border py-2">
-                                                            <div className="d-flex justify-content-between">
-                                                                <label className="h5"> Used</label>
-                                                                <Field className="mt-1" type="radio" name="condition" value="75%" />
-                                                            </div>
-                                                            <label className="mt-2">
-                                                                Everything works, normal to heavy wear and tear.
+                                                         <label className={`h-100 m-2 cursor-pointer text-center  p-4 ${values.condition === "100%" && 'border border-dark' || ''}`}>
+                                                                <Field className="mr-2 d-none"type="radio" name="condition" value="100%" />
+                                                                <div>
+                                                                   <h3><b>Brand new</b></h3> 
+                                                                </div>
+                                                                
+                                                                <div className="margin-5">
+                                                                    Sealed in the box
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                    Comes in the original
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                   company packaging
+                                                                </div>
                                                            </label>
-                                                        </div>
-
-                                                        <div className="col-md-2 ml-2 mb-2 border py-2">
-                                                            <div className="d-flex justify-content-between">
-                                                                <label className="h5"> Poor</label>
-                                                                <Field className="mt-1" type="radio" name="condition" value="50%" />
                                                             </div>
-                                                            <label className="mt-2">
-                                                                Cracked screen, broken button, or other damage.
+                                                            <div className="border border-dark-white rounded mx-2">
+
+                                                         <label className={`h-100 m-2 cursor-pointer text-center  p-4 ${values.condition === "75%" && 'border border-dark' || ''}`}>
+                                                                <Field className="mr-2 d-none"type="radio" name="condition" value="75%" />
+                                                                <div>
+                                                                   <h3><b>Good</b></h3> 
+                                                                </div>
+                                                                
+                                                                <div className="margin-5">
+                                                                Everything works,
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                Moderate sign of use,
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                Minimal wear and tear.
+                                                                </div>
                                                            </label>
-                                                        </div>
-
-                                                        <div className="col-md-2 ml-2 mb-2 border py-2">
-                                                            <div className="d-flex justify-content-between">
-                                                                <label className="h5"> Faulty</label>
-                                                                <Field className="mt-1" type="radio" name="condition" value="Broken" />
                                                             </div>
-                                                            <label className="mt-2">
-                                                                Doesn't power on, exposed internal component, shattered screen.
-                                                            </label>
-                                                        </div>
+                                                            <div className="border border-dark-white rounded mx-2">
 
+                                                         <label className={`h-100 m-2 cursor-pointer text-center  p-4 ${values.condition === "50%" && 'border border-dark' || ''}`}>
+                                                                <Field className="mr-2 d-none"type="radio" name="condition" value="50%" />
+                                                                <div>
+                                                                   <h3><b>Used</b></h3> 
+                                                                </div>
+                                                                
+                                                                <div className="margin-5">
+                                                                Everything works,
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                normal to heavy
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                wear and tear.
+                                                                </div>
+                                                           </label>
+                                                            </div>
+                                                            <div className="border border-dark-white rounded mx-2">
+
+                                                         <label className={`h-100 m-2 cursor-pointer text-center  p-4 ${values.condition === "Broken" && 'border border-dark' || ''}`}>
+                                                                <Field className="mr-2 d-none"type="radio" name="condition" value="Broken" />
+                                                                <div>
+                                                                   <h3><b>Faulty/Defective</b></h3> 
+                                                                </div>
+                                                                
+                                                                <div className="margin-5">
+                                                                Doesn't power on,
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                exposed internal component,
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                battery expanded
+                                                                </div>
+                                                                <div className="margin-5 mb-1">
+                                                                shattered screen, 
+                                                                </div>
+                                                           </label>
+                                                            </div>
+                                                           
+                                                        </div>
                                                         <div className="col-md-12">
                                                             <ErrorMessage name="condition" className="text-danger" component="div" />
                                                         </div>
@@ -546,7 +625,7 @@ const IPhone = (props) => {
                                                         {!isEmpty(offers) &&
                                                             <div className="col-md-12 mt-3">
                                                                 <div className="d-flex align-items-center">
-                                                                    <h4>{values.deviceType}/ {values.carrier === "att" ? 'At&t' : values.carrier}/ {values.condition === "100%" ? 'Good' : values.condition === "75%" ? 'Used' : values.condition === "50%" ? 'Poor' : values.condition === "Broken" ? 'Faulty' : ''}</h4> <span className="ml-2 cursor-pointer text-info h6"
+                                                                    <h4>{values.deviceType}/ {values.carrier === "Bell" ? 'Bell' : values.carrier}/ {values.condition === "100%" ? 'Brand New' : values.condition === "75%" ? 'Good' : values.condition === "50%" ? 'Used' : values.condition === "Broken" ? 'Faulty/Defective' : ''}</h4> <span className="ml-2 cursor-pointer text-info h6"
                                                                         onClick={(e) => {
                                                                             handleChange({
                                                                                 target: {
@@ -603,8 +682,8 @@ const IPhone = (props) => {
                                     <div className="mt-3">
                                         <p className="mb-0">*Offered value of the device is subject to device review </p>
                                         <p className="mb-0">We may requote you with higher offer value if we find the cosmetic condition of the device better than what you thought of and vice versa </p>
-                                        <p className="mb-0">We process the payment immediately after receiving your device we offer free express shipping. </p>
-                                        <p className="mb-0">We don’t pay for the devices that have been reported lost or stolen</p>
+                                        <p className="mb-0">We process the payment immediately after receiving your device</p>
+                                        <p className="mb-0">We don’t pay for the devices that have been reported stolen/lost or blacklisted</p>
                                     </div>
                                 </div>
                             }

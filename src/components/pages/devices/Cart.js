@@ -107,7 +107,7 @@ const CartPage = (props) => {
                         </div>
                         <div className="col-md-12 mt-3">
                             <h6 className="ml-2">{item.deviceModel} , {item.deviceCapacity}  {item.ipad_generation} </h6>
-                            <h6 className="ml-2 mt-1">{item.deviceCondition === '100%' ? "Good" : item.deviceCondition === '75%' ? "Used" : item.deviceCondition === '50%' ? "Poor" : item.deviceCondition === 'Broken' ? "Faulty" : item.deviceCondition} Condition  </h6>
+                            <h6 className="ml-2 mt-1">{item.deviceCondition === '100%' ? "Brand New" : item.deviceCondition === '75%' ? "Good" : item.deviceCondition === '50%' ? "Used" : item.deviceCondition === 'Broken' ? "Faulty/Defective" : item.deviceCondition} Condition  </h6>
                         </div>
                         <div className="col-md-12 mb-4">
                             {item.deviceOffer === 0 &&
@@ -158,7 +158,7 @@ const CartPage = (props) => {
                         <div className="mt-4">
                             <ul>
                                 <li>We recommend to create the account if you don't have one!</li>
-                                <li>If you are a existing customer kindly sign in to proceed2</li>
+                                <li>If you are a existing customer kindly sign in to proceed</li>
                                 <li>Register user have more way to track their order</li>
                                 <li>Its more convenient for you to get notify of each steps during the process</li>
                             </ul>

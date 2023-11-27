@@ -13,10 +13,13 @@ const deviceNav = (props) => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
+                   
 
                     <NavDropdown title="IPHONES" id="collasible-nav-dropdown">
-                    <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 14 Pro Max")}>iPhone 14 pro Max</NavDropdown.Item>
+                    <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 15 Pro Max")}>iPhone 15 pro Max</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 15 Pro")}>iPhone 15 pro</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 15")}>iPhone 15 </NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iPhone/IPhone 14 Pro Max")}>iPhone 14 pro Max</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 14 Pro")}>iPhone 14 pro</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 14 Plus")}>iPhone 14 Plus</NavDropdown.Item>
                         <NavDropdown.Item onClick={e => linkTo("/iPhone/Iphone 14")}>iPhone 14 </NavDropdown.Item>
@@ -59,11 +62,14 @@ const deviceNav = (props) => {
                     </NavDropdown>
 
                     <NavDropdown title="Apple IWatch" id="collasible-nav-dropdown">
-                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 1")}>iWatch Series 1</NavDropdown.Item>
-                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 2")}>iWatch Series 2</NavDropdown.Item>
-                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 3")}>iWatch Series 3</NavDropdown.Item>
-                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 4")}>iWatch Series 4</NavDropdown.Item>
-                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 5")}>iWatch Series 5</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 1")}>iWatch Series 6</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 1")}>iWatch Series SE</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 2")}>iWatch Series 7</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 3")}>iWatch Series 8</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 1")}>iWatch Series SE</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 4")}>iWatch Ultra</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 5")}>iWatch Series 9</NavDropdown.Item>
+                        <NavDropdown.Item onClick={e => linkTo("/iWatch/Apple Watch Series 4")}>iWatch Ultra 2</NavDropdown.Item>
                     </NavDropdown>
 
                     <NavDropdown title="Android Phones" id="collasible-nav-dropdown">
